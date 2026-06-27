@@ -3,11 +3,147 @@
     <head>
         <meta charset="UTF-8">
         <title>My First Page</title>
+
+        <style>
+        /* CSS ខ្លីៗដើម្បីកំណត់ម៉ូតប្រអប់រូបភាព និង font ឱ្យដូចរូបភាពគំរូ */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .photo-box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        .links a {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #000000;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        /* ប្រើ Flexbox ដើម្បីដាក់រូបថត និងព័ត៌មាននៅទន្ទឹមគ្នា */
+        .container {
+            display: flex;
+            gap: 40px; /* គម្លាតរវាងប្រអប់រូបថត និងអត្ថបទ */
+            align-items: flex-start;
+        }
+        /* Style សម្រាប់ធ្វើប្រអប់រូបថតផលិតផល */
+        .product-image-box {
+            width: 210px;
+            height: 200px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0; /* ការពារកុំឱ្យរួមប្រអប់ */
+        }
+        .product-details h2, .product-details h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .price {
+            margin-bottom: 20px;
+        }
+        .description {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        .buy-now {
+            display: inline-block;
+            margin-top: 15px;
+            color: blue;
+            text-decoration: none;
+        }
+        .buy-now:hover {
+            text-decoration: underline;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #000000;
+            line-height: 1.6;
+        }
+        h1 {
+            margin-bottom: 5px;
+        }
+        .author-date {
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        /* Style សម្រាប់ធ្វើប្រអប់រូបភាពទូលាយ */
+        .article-image-box {
+            width: 100%;
+            max-width: 600px;
+            height: 200px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        /* Style សម្រាប់អត្ថបទដកស្រង់ (Quote) */
+        .quote-text {
+            margin-left: 20px;
+            font-style: normal;
+        }
+        .related-links {
+            margin-top: 20px;
+        }
+        .related-links a {
+            color: blue;
+            text-decoration: none;
+        }
+        .related-links a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
     </head>
+
     <body>
         <h1>Personal Profile</h1>
-         <img src="./imag/Hoon1.jpg" width="120" height="120" alt="Trulli">
-        <h4>Chharng Chhit</h4>
+         <div class="photo-box">Photo</div>
+
+        <h3>Chharng Chhit</h3>
         <p>Frontend Web Design Student</p>
         <h3>About Me</h3>
         <p>I am learning HTML I want to create a simple website</p>
@@ -29,7 +165,179 @@
         <a href="https://www.home.com" target="_blank">Home |</a>
         <a href="https://www.lessons.com" target="_blank">Lessons |</a>
         <a href="https://www.contact.com" target="_blank">Contact</a>
+        <h2>Learn HTML from Zero</h2>
+        <p>This course teaches students how to create website structure using HTML only.</p>
+        <h2>Lessons</h2>
+        <ol>
+            <li>Lesson 1: HTML Basic Tag</li>
+            <li>Lesson 2: Lists, Links and Images</li>
+            <li>Lesson 3: Tables and Forms</li>
+        </ol>
+        <h2>Course Information</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+                <tr>
+                <td>Topic</td>
+                <td>Practice</td>
+            </tr>
+            </thead>
+            <tbody>
+                 <tr>
+                <td>HTML Structure</td>
+                <td>Create a page</td>
+            </tr>
+            <tr>
+                <td>Form</td>
+                <td>Register student</td>
+            </tr>
+            <tr>
+                <td>Table</td>
+                <td>Show schedule</td>
+            </tr>
+            </tbody>
+        </table>
+        <h1>Student Registration Form</h1>
+        <form>
+            <p>
+            <label for="fullname"><b>Full Name</b></label><br>
+            <input type="text" id="fullname" placeholder="text input" style="width: 300px;">
+        </p>
 
+        <p>
+            <label for="email"><b>Email</b></label><br>
+            <input type="email" id="email" placeholder="email input" style="width: 300px;">
+        </p>
+
+        <p>
+            <label for="gender"><b>Gender</b></label><br>
+            <select id="gender" style="width: 308px;">
+                <option value="">select option</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="course"><b>Course</b></label><br>
+            <select id="course" style="width: 308px;">
+                <option value="">select option</option>
+                <option value="html">HTML Basic</option>
+                <option value="css">CSS Design</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="message"><b>Message</b></label><br>
+            <textarea id="message" placeholder="textarea" rows="5" style="width: 400px;"></textarea>
+        </p>
+
+        <p>
+            <input type="checkbox" id="rules">
+            <label for="rules">I agree to class rules</label>
+        </p>
+        </form>
+        <h1>HTML Cafe Menu</h1>
+        <p>Fresh food for web students</p>
+        <br>
+
+        <table border="0" width="100%" cellpadding="10" cellspacing="0">
+        <tr valign="top">
+            
+            <td width="50%">
+                <h2>Food Menu</h2>
+                <ul>
+                    <li>Fried Rice - $2.50</li>
+                    <li>Noodle Soup - $3.00</li>
+                    <li>Chicken Sandwich - $2.00</li>
+                </ul>
+
+                <h2>Drinks</h2>
+                <ol>
+                    <li>Iced Coffee - $1.25</li>
+                    <li>Fruit Tea - $1.50</li>
+                    <li>Water - $0.50</li>
+                </ol>
+            </td>
+
+            <td width="50%">
+                <h2>Opening Hours</h2>
+                <table border="1" cellpadding="8" cellspacing="0" width="80%">
+                    <thead>
+                        <tr>
+                            <th align="left">Day</th>
+                            <th align="left">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday - Friday</td>
+                            <td>7:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8:00 - 16:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Closed</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Address</h2>
+                <p>Phnom Penh, Cambodia</p>
+            </td>
+
+        </tr>
+    </table>
+
+    <h1>Product Detail Page</h1>
+
+    <div class="container">
+        <div class="product-image-box">
+            Product Image
+        </div>
+
+        <div class="product-details">
+            <h2>Wireless Keyboard</h2>
+            <p class="price">Price: $29.00</p>
+
+            <h3>Description</h3>
+            <p class="description">A simple keyboard for students who learn coding.</p>
+
+            <h3>Features</h3>
+            <ul>
+                <li>Bluetooth connection</li>
+                <li>Rechargeable battery</li>
+                <li>Small and light</li>
+                <li>Good for students</li>
+            </ul>
+
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+    </div>
+
+    <h1>School Technology Day 2026</h1>
+    <p class="author-date">By Student Name | 14 June 2026</p>
+
+    <div class="article-image-box">
+        Article Image
+    </div>
+
+    <h2>Introduction</h2>
+    <p>Students present HTML projects in class.</p>
+    <p>The event helps beginners understand page structure and semantic tags.</p>
+
+    <h2>Quote</h2>
+    <p class="quote-text">“HTML is the structure of a web page.”</p>
+
+    <h2>Related Links</h2>
+    <p class="related-links">
+        <a href="https://www.Home.com">Home</a> | 
+        <a href="https://www.Course.com">Course</a> | 
+        <a href="https://www.Contact.com">Contact</a>
+    </p>
 
     </body>
 </html>
